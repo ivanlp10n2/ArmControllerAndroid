@@ -1,0 +1,192 @@
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                                             xmlns:app="http://schemas.android.com/apk/res-auto"
+                                             xmlns:tools="http://schemas.android.com/tools"
+                                             android:layout_width="match_parent"
+                                             android:layout_height="match_parent"
+                                             android:background="#0099cc"
+                                             tools:context="ar.sourcesistemas.empanada.roboarmstream.Acitivty.StreamActivity">
+
+    <!-- The primary full-screen view. This can be replaced with whatever view
+         is needed to present your content, e.g. VideoView, SurfaceView,
+         TextureView, etc. -->
+
+    <!-- This FrameLayout insets its children based on system windows using
+         android:fitsSystemWindows. -->
+
+
+    <VideoView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/video_stream"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="359dp"
+        android:id="@+id/v_izq1"
+        app:layout_constraintGuide_begin="82dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="82dp"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="wrap_content"
+        android:layout_height="359dp"
+        android:id="@+id/v_der1"
+        app:layout_constraintGuide_begin="514dp"
+        android:orientation="vertical"
+        tools:layout_editor_absoluteY="0dp"
+        tools:layout_editor_absoluteX="514dp"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="592dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/h_guideline1"
+        app:layout_constraintGuide_begin="47dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="47dp"
+        tools:layout_editor_absoluteX="0dp"/>
+
+    <android.support.constraint.Guideline
+        android:layout_width="592dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/v_guideline2"
+        app:layout_constraintGuide_begin="296dp"
+        android:orientation="horizontal"
+        tools:layout_editor_absoluteY="296dp"
+        tools:layout_editor_absoluteX="0dp"/>
+
+    <Button
+        android:text="+Pres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_morePres"
+        app:layout_constraintBottom_toTopOf="@+id/h_guideline1"
+        android:layout_marginStart="16dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintRight_toLeftOf="@+id/v_izq1"/>
+
+    <Button
+        android:text="-Pres"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_lessPres"
+        app:layout_constraintTop_toTopOf="@+id/video_stream"
+        app:layout_constraintRight_toRightOf="@+id/video_stream"
+        app:layout_constraintLeft_toLeftOf="@+id/v_der1"
+        app:layout_constraintBottom_toTopOf="@+id/h_guideline1"
+        app:layout_constraintHorizontal_bias="0.4"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <Button
+        android:text="Adelante"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_adelante"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_lessPres"
+        app:layout_constraintLeft_toLeftOf="@+id/v_der1"
+        android:layout_marginEnd="16dp"
+        app:layout_constraintRight_toRightOf="parent"
+        android:layout_marginRight="16dp"/>
+
+    <Button
+        android:text="Atras"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_atras"
+        app:layout_constraintLeft_toLeftOf="@+id/video_stream"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_morePres"/>
+
+    <Button
+        android:text="Cerrar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_cerrarPinza"
+        app:layout_constraintTop_toTopOf="@+id/v_guideline2"
+        app:layout_constraintBottom_toBottomOf="@+id/video_stream"
+        app:layout_constraintLeft_toLeftOf="@+id/v_der1"/>
+
+    <Button
+        android:text="Abrir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_abrirPinza"
+        app:layout_constraintTop_toTopOf="@+id/v_guideline2"
+        app:layout_constraintBottom_toBottomOf="@+id/video_stream"
+        app:layout_constraintRight_toLeftOf="@+id/v_izq1"/>
+
+    <Button
+        android:text="subir"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_subir"
+        app:layout_constraintBottom_toTopOf="@+id/h_guideline1"
+        android:layout_marginStart="88dp"
+        app:layout_constraintLeft_toRightOf="@+id/button_morePres"
+        android:layout_marginLeft="88dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <Button
+        android:text="bajar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_bajar"
+        app:layout_constraintBottom_toTopOf="@+id/h_guideline1"
+        app:layout_constraintRight_toLeftOf="@+id/button_lessPres"
+        android:layout_marginEnd="104dp"
+        android:layout_marginRight="104dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"/>
+
+    <Button
+        android:text="izquierda"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        tools:layout_editor_absoluteX="0dp"
+        android:id="@+id/button_izq"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_atras"/>
+
+    <Button
+        android:text="derecha"
+        android:layout_width="88dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_der"
+        android:layout_marginTop="16dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_adelante"
+        app:layout_constraintLeft_toLeftOf="@+id/v_der1"
+        app:layout_constraintRight_toRightOf="@+id/video_stream"/>
+
+    <Button
+        android:text="MuñecaDown"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_muñecaDown"
+        app:layout_constraintBottom_toTopOf="@+id/v_guideline2"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_izq"
+        app:layout_constraintRight_toLeftOf="@+id/v_izq1"/>
+
+    <Button
+        android:text="MuñecaUP"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/button_muñecaUp"
+        app:layout_constraintBottom_toTopOf="@+id/v_guideline2"
+        android:layout_marginBottom="8dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintTop_toBottomOf="@+id/button_der"
+        app:layout_constraintLeft_toLeftOf="@+id/v_der1"/>
+</android.support.constraint.ConstraintLayout>
