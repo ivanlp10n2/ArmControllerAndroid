@@ -1,12 +1,13 @@
 package ar.sourcesistemas.empanada.roboarmstream.Acitivty;
 
 
-import android.content.Context;
+
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.AttributeSet;
 import android.view.View;
+import android.view.Window;
+import android.view.WindowManager;
 import android.widget.Button;
 import android.widget.Toast;
 
@@ -60,6 +61,10 @@ public class StreamActivity extends AppCompatActivity implements View.OnClickLis
     @Override
     protected void onCreate(Bundle savedInstanceState)
     {
+        requestWindowFeature(Window.FEATURE_NO_TITLE);
+        this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
+
+
         super.onCreate(savedInstanceState);
 
 
@@ -100,6 +105,11 @@ public class StreamActivity extends AppCompatActivity implements View.OnClickLis
 
         muñecaDown = (Button) findViewById(R.id.button_muñecaDown);
         muñecaDown.setOnClickListener(this);
+
+
+
+
+
     }
 
 
@@ -110,15 +120,15 @@ public class StreamActivity extends AppCompatActivity implements View.OnClickLis
         {
             case R.id.button_morePres:
                 new Lichterkette(PRECISION_MAS).execute();
-                Toast.makeText(StreamActivity.this, URI+PRECISION_MAS, Toast.LENGTH_LONG).show();
+//                Toast.makeText(StreamActivity.this, URI+PRECISION_MAS, Toast.LENGTH_LONG).show();
                 break;
             case R.id.button_lessPres:
                 new Lichterkette(PRECISION_MENOS).execute();
-                Toast.makeText(StreamActivity.this, URI+PRECISION_MENOS, Toast.LENGTH_LONG).show();
+//                Toast.makeText(StreamActivity.this, URI+PRECISION_MENOS, Toast.LENGTH_LONG).show();
                 break;
             case R.id.button_adelante:
                 new Lichterkette(ADELANTE).execute();
-                Toast.makeText(StreamActivity.this, URI+ADELANTE, Toast.LENGTH_LONG).show();
+//                Toast.makeText(StreamActivity.this, URI+ADELANTE, Toast.LENGTH_LONG).show();
                 break;
             case R.id.button_atras:
                 new Lichterkette(ATRAS).execute();
